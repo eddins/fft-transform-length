@@ -8,7 +8,7 @@ function opts = toolboxOptions
 
     opts = matlab.addons.toolbox.ToolboxOptions(toolbox_folder,identifier);
 
-    opts.ToolboxName = "fftTransformLength Toolbox";
+    opts.ToolboxName = "FFT Transform Length";
 
     % Version number of the toolbox. Use semantic version numbers of the
     % form MAJOR.MINOR.PATCH, such as "2.0.1". Increment the MAJOR version
@@ -37,7 +37,7 @@ function opts = toolboxOptions
     % .mltbx extension, MATLAB appends the extension automatically when it
     % creates the file.
 
-    opts.OutputFile = fullfile("release","fftTransformLength Toolbox");
+    opts.OutputFile = fullfile("release","FFT Transform Length");
     
     % Latest MATLAB release that the toolbox is compatible with, specified
     % as a string using the format RXXXXx, for example, "R2023a". If there
@@ -51,7 +51,7 @@ function opts = toolboxOptions
     % If there is no minimum restriction, specify MinimumMatlabRelease as
     % empty ("").
 
-    opts.MinimumMatlabRelease = "";
+    opts.MinimumMatlabRelease = "R2019b";
 
     % Supported platforms
 
@@ -61,11 +61,14 @@ function opts = toolboxOptions
     platforms.MatlabOnline = true;
     opts.SupportedPlatforms = platforms; 
 
-    % opts.Description = 
+    opts.Description = "The function fftTransformLength computes " + ...
+        "a transform length that is optimized for faster FFT " + ...
+        "computation. The function is useful for choosing the padded " + ...
+        "transform length in situations involving zero-padded FFTs.";
 
-    % opts.Summary = 
+    opts.Summary = "Computes optimized transform length for FFT computations";
 
-    % opts.AuthorName = 
+    opts.AuthorName = "Steve Eddins";
 
     % opts.AuthorEmail =
 
@@ -74,7 +77,7 @@ function opts = toolboxOptions
     % Path to the toolbox image file. Can be specified as a relative or
     % absolute path.
     %
-    % opts.ToolboxImageFile = 
+    opts.ToolboxImageFile = "./images/fft-transform-length.jpg";
 
     % Files to be packaged in the toolbox, string vector. By default,
     % ToolboxFiles contains the list of all files in toolboxFolder.
