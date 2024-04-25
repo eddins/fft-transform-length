@@ -9,7 +9,7 @@ optimized for faster FFT computation in MATLAB. The function is useful for choos
 
 ## Installation
 
-Download the `FFT Transform Length.mltbx` file from the [GitHub repository releases area](https://github.com/eddins/fft-transform-length/releases/) or from the [File Exchange](). Double-click on the downloaded file to automatically run the MATLAB add-on installer. This will copy the files to your MATLAB add-ons area and add the `fftTransformLength` function to your MATLAB search path.
+Download the `fft-transform-length.mltbx` file from the [GitHub repository releases area](https://github.com/eddins/fft-transform-length/releases/) or from the [File Exchange](). Double-click on the downloaded file to automatically run the MATLAB add-on installer. This will copy the files to your MATLAB add-ons area and add the `fftTransformLength` function to your MATLAB search path.
 
 Later, you can use the [MATLAB Add-On Manager](https://www.mathworks.com/help/matlab/matlab_env/get-add-ons.html) to uninstall.
 
