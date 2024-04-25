@@ -1,4 +1,4 @@
-[![View FFT Transform Length on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/bogus) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=eddins/fft-transform-length&file=toolbox/gettingStarted.mlx)
+[![View FFT Transform Length on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/164476-fft-transform-length) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=eddins/fft-transform-length&file=toolbox/gettingStarted.mlx)
 
 # FFT Transform Length
 
