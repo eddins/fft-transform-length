@@ -1,6 +1,7 @@
 %generateLookupTable Generate lookup table for fftTransformLength
-%   P = generateLookupTable(N) returns a sort list of integers that are
-%   less than or equal to N and that have no prime factor larger than 7.
+%   P = generateLookupTable(N) returns a sort list of nonnegative integers
+%   that are less than or equal to N and that have no prime factor larger
+%   than 7.
 %
 %   This function is used to create the code inside fftTransformLength.m.
 %   It is not meant to be installed on the MATLAB search path for general
@@ -22,5 +23,5 @@ function P = generateLookupTable(N)
 
     P = sort(P(:));
     i = find(P >= N, 1, "first");
-    P = P(1:i);
+    P = [0 ; P(1:i)];
 end

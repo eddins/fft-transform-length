@@ -32,27 +32,16 @@ classdef fftTransformLength_test < matlab.unittest.TestCase
 
         function typeBehavior(test_case)
             np = fftTransformLength(single(23));
-            test_case.verifyClass(np,"single");
+            test_case.verifyClass(np,"double");
 
             np2 = fftTransformLength(int32(23));
-            test_case.verifyClass(np2,"int32");
-        end
-
-        function overflow(test_case)
-            types = ["uint8" "int8" "uint16" "int16" "uint32" "int32" ...
-                "uint64" "int64"];
-
-            for k = 1:numel(types)
-                test_case.verifyError(...
-                    @() fftTransformLength(intmax(types(k))), ...
-                    "fftTransformLength:overflow")
-            end
+            test_case.verifyClass(np2,"double");
         end
 
         function inputTooHigh(test_case)
             test_case.verifyError(...
-                @() fftTransformLength(2*flintmax),...
-                "fftTransformLength:tooHigh");
+                @() fftTransformLength(1e10 + 1),...
+                "MATLAB:validators:mustBeInRange");
         end
 
         function integerValidation(test_case)
@@ -64,7 +53,7 @@ classdef fftTransformLength_test < matlab.unittest.TestCase
         function nonnegativeValidation(test_case)
             test_case.verifyError(...
                 @() fftTransformLength(-2),...
-                "MATLAB:validators:mustBeNonnegative");            
+                "MATLAB:validators:mustBeInRange");            
         end
     end
 
