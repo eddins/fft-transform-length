@@ -7,13 +7,14 @@
 %   It is not meant to be installed on the MATLAB search path for general
 %   use.
 %
-%   Thanks for Chris Turnes sharing the concepts underlying this function.
+%   Thanks to Chris Turnes for sharing the concepts underlying this
+%   function.
 %
 %   See also fftTransformLength, generateLookupTableCode
 
 function P = generateLookupTable(N)
     arguments
-        N (1,1) double = 1e7
+        N (1,1) double = 2e9
     end
 
     P = 2.^(0:ceil(log2(N)));
